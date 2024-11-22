@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./public/style.css">
+    <script src="./public/xlsx.full.min.js"></script>
+    <title>monKon - 241122</title>
+</head>
+<body>
+    <section>
+        <header>
+            <h3>Mon Kontrak</h3>
+                <input type="file" name="upFile" id="upFile">
+                <button id="upBtn">Proses</button>
+        </header>
+        <nav>
+            <select name="slSrt" id="slSrt">
+                <option value="" disabled selected>Urutkan</option>
+                <option value="tgAsc">Tgl Selesai ↑</option>
+                <option value="tgDes">Tgl Selesai ↓</option>
+            </select>
+            <h3></h3>
+            <select name="slSts" id="slSts">
+                <option value="" disabled selected>Status</option>
+                <option value="Berjalan">Berjalan</option>
+                <option value="Selesai">Selesai</option>
+            </select>
+            <input name="kdStr" id="kdStr" type="text" placeholder="Kode Satker">
+            <button id="flBtn">Filter</button>
+        </nav>
+        <article id="startPage">
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Kd. Satker</th>
+                        <th>No. Kontrak</th>
+                        <th>Nilai Kontrak</th>
+                        <th>Nilai Realisasi</th>
+                        <th>Nilai Sisa</th>
+                        <th>Tanggal Selesai</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="fullData"></tbody>
+            </table>
+        </article>
+    </section>
+    <script src="./public/function.js"></script>
+</body>
+</html>
